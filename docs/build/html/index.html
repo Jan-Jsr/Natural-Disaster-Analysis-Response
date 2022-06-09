@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ECE 229 - Natural Disasters and Response &#8212; ECE-229-Natural-Disasters-and-Response 1.0 documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="#">
+<p class="title">ECE-229-Natural-Disasters-and-Response</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <strong>
+    ECE 229 - Natural Disasters and Response
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-documention">
+   API Documention
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#disaster-analysis-geographical">
+     Disaster Analysis - Geographical
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#disaster-analysis-temporal">
+     Disaster Analysis - Temporal
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cpi-prediction-model">
+     CPI Prediction Model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#earthquake-prediction-model">
+     Earthquake Prediction Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="ece-229-natural-disasters-and-response">
+<h1><strong>ECE 229 - Natural Disasters and Response</strong><a class="headerlink" href="#ece-229-natural-disasters-and-response" title="Permalink to this headline">#</a></h1>
+<p>As a non-profit organization we want our end users/donators to understand the importance of
+our work. Our goal is to convince English speaking potential donors to donate to our company
+so we can continue our company’s mission: “help others through providing humanitarian aid.”
+Through our dashboard we can educate potential donors on the magnitude of damage that
+natural disasters can cause. Utilizing interactive visuals provide a digestible way to learn the
+impact of natural disasters around the world such as the number of deaths, and monetary
+damage.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="api-documention">
+<h1>API Documention<a class="headerlink" href="#api-documention" title="Permalink to this headline">#</a></h1>
+<p>There are four main components to our dashboard that create a collection of visualizations that serve
+educate our end users. The following sections will show each of these four main components and their
+associated modules.</p>
+<section id="disaster-analysis-geographical">
+<h2>Disaster Analysis - Geographical<a class="headerlink" href="#disaster-analysis-geographical" title="Permalink to this headline">#</a></h2>
+<p>The main visualization here is allowing an end user to visualize disaster statistics such as the distribution
+of disasters, deaths, homeless, injured, affected, damages, and reconstruction costs on a geographical basis:
+the maximum amount of granularity offered here is per country. This is shown both on a chloropleth map with
+a colormap for intensity of each statistic as well as a bar plot showing the top ten countries per statistic.
+The user is able to pick each statistic from a dropdown menu and fine-tune the period of the distribution in
+terms of years.</p>
+<span class="target" id="module-custom_code.major_disaster_analysis"></span><dl class="py function">
+<dt class="sig sig-object py" id="custom_code.major_disaster_analysis.death_vs_gdp">
+<span class="sig-prename descclassname"><span class="pre">custom_code.major_disaster_analysis.</span></span><span class="sig-name descname"><span class="pre">death_vs_gdp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natural_disaster_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gdp_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.major_disaster_analysis.death_vs_gdp" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots a graph that shows the Total Death counts vs the GDP per capita value
+for disasters that caused over 5000 deaths.</p>
+<dl class="simple">
+<dt><strong>:natural_disaster_df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe.</p>
+</dd>
+<dt><strong>:gdp_df: pd.DataFrame</strong></dt><dd><p>The GDP per capita dataframe</p>
+</dd>
+</dl>
+<p><strong>Returns: None</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.major_disaster_analysis.major_disaster_distribution">
+<span class="sig-prename descclassname"><span class="pre">custom_code.major_disaster_analysis.</span></span><span class="sig-name descname"><span class="pre">major_disaster_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natural_disaster_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.major_disaster_analysis.major_disaster_distribution" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots a world map that displays the density of the countries that major disasters took place.</p>
+<dl class="simple">
+<dt><strong>:natural_disaster_df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+</dl>
+<p><strong>Returns: gv.Polygons object</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.major_disaster_analysis.map_distribution_cases">
+<span class="sig-prename descclassname"><span class="pre">custom_code.major_disaster_analysis.</span></span><span class="sig-name descname"><span class="pre">map_distribution_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natural_disaster_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voila</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.major_disaster_analysis.map_distribution_cases" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots a world map that displays the density of the countries that major disasters
+took place. Can also display multiple types of dependent features.</p>
+<dl class="simple">
+<dt><strong>:natural_disaster_df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+<dt><strong>:voila: bool</strong></dt><dd><p>Use to return plot that is visible in a notebook</p>
+</dd>
+<dt><strong>Returns: ipywidget.widget</strong></dt><dd><p>a widget incorporating panel controlling parameters and a holoviews dynamic map</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="disaster-analysis-temporal">
+<h2>Disaster Analysis - Temporal<a class="headerlink" href="#disaster-analysis-temporal" title="Permalink to this headline">#</a></h2>
+<p>There are two main visualizations showcasing the distributions of disasters over time. The first is a bar plot
+that similarly shows the previously mentioned disaster statistics over a specified time period (again accessible
+through a dropdown menu and range bar), as well as a dynamic stacked bar plot that filters for specific types of
+disasters and measures disaster occurance, deaths, and economic damages (stratified via a dropdown menu).</p>
+<span class="target" id="module-custom_code.ML_models.dis_trends"></span><dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.dis_trends.dis_analysis_">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.dis_trends.</span></span><span class="sig-name descname"><span class="pre">dis_analysis_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natural_disaster_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voila</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.dis_trends.dis_analysis_" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots multiple disaster statistics over specified time period.</p>
+<dl class="simple">
+<dt><strong>:natural_disaster_df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+<dt><strong>:voila: bool</strong></dt><dd><p>Use to return plot that is visible in a notebook</p>
+</dd>
+<dt><strong>Returns: ipywidget.widget</strong></dt><dd><p>a widget incorporating panel controlling parameters and a holoviews dynamic map</p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-custom_code.ML_models.stacked_bar"></span><dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.stacked_bar.dis_analysis">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.stacked_bar.</span></span><span class="sig-name descname"><span class="pre">dis_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voila</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.stacked_bar.dis_analysis" title="Permalink to this definition">#</a></dt>
+<dd><p>Does natural disaster trends analysis using Holoviews Dynamic Map.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe.</p>
+</dd>
+<dt><strong>:voila: bool</strong></dt><dd><p>Use to return plot that is visible in a notebook</p>
+</dd>
+<dt><strong>Returns: ipywidget.widget</strong></dt><dd><p>a widget incorporating panel controlling parameters and a holoviews dynamic map</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.stacked_bar.stacked_plot_damages">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.stacked_bar.</span></span><span class="sig-name descname"><span class="pre">stacked_plot_damages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.stacked_bar.stacked_plot_damages" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepares dataframe to be used as a stacked bar plot for damages incurred over time.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+<dt><strong>Returns: pd.DataFrame</strong></dt><dd><p>Prepared dataframe to be used for stacked bar plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.stacked_bar.stacked_plot_deaths">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.stacked_bar.</span></span><span class="sig-name descname"><span class="pre">stacked_plot_deaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.stacked_bar.stacked_plot_deaths" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepares dataframe to be used as a stacked bar plot for deaths ocurred over time.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+<dt><strong>Returns: pd.DataFrame</strong></dt><dd><p>Prepared dataframe to be used for stacked bar plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.stacked_bar.stacked_plot_occurences">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.stacked_bar.</span></span><span class="sig-name descname"><span class="pre">stacked_plot_occurences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.stacked_bar.stacked_plot_occurences" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepares dataframe to be used as a stacked bar plot for disaster occurances over time.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>The natural disaster dataframe</p>
+</dd>
+<dt><strong>Returns: pd.DataFrame</strong></dt><dd><p>Prepared dataframe to be used for stacked bar plot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="cpi-prediction-model">
+<h2>CPI Prediction Model<a class="headerlink" href="#cpi-prediction-model" title="Permalink to this headline">#</a></h2>
+<p>Similar to the geographical disaster analysis, this module predicts a country’s CPI: community preparedness index
+based on the features of the dataset. Users can pick a year, month, and disaster type of predict each country’s CPI;
+a bar plot will rank the lowest ten CPIs. Prediction is done using an XGBoost model.</p>
+<span class="target" id="module-custom_code.ML_models.disaster_cpi_prediction"></span><dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.disaster_cpi_prediction.cpi_prediction_module">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.disaster_cpi_prediction.</span></span><span class="sig-name descname"><span class="pre">cpi_prediction_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1950</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2050</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voila</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.disaster_cpi_prediction.cpi_prediction_module" title="Permalink to this definition">#</a></dt>
+<dd><p>Plots a world map that displays the density of predicted CPI per country based on panel sliders</p>
+<dl class="simple">
+<dt><strong>:min_date: Int</strong></dt><dd><p>minimum date for slider</p>
+</dd>
+<dt><strong>:max_date: Int</strong></dt><dd><p>maxmimum date for slider</p>
+</dd>
+<dt><strong>:voila: bool</strong></dt><dd><p>Use to return plot that is visible in a notebook</p>
+</dd>
+<dt><strong>Returns: ipywidget.widget</strong></dt><dd><p>a widget incorporating panel controlling parameters and a holoviews dynamic map</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.disaster_cpi_prediction.one_hot_encode">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.disaster_cpi_prediction.</span></span><span class="sig-name descname"><span class="pre">one_hot_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.disaster_cpi_prediction.one_hot_encode" title="Permalink to this definition">#</a></dt>
+<dd><p>Do one-hot enconding on dataframe columns.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame:</strong></dt><dd><p>Total dataset.</p>
+</dd>
+<dt><strong>:title_name: str:</strong></dt><dd><p>One-hot encoding target.</p>
+</dd>
+</dl>
+<p><strong>Returns: pd.DataFrame</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.disaster_cpi_prediction.plot_worldwide_choroplethmap">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.disaster_cpi_prediction.</span></span><span class="sig-name descname"><span class="pre">plot_worldwide_choroplethmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.disaster_cpi_prediction.plot_worldwide_choroplethmap" title="Permalink to this definition">#</a></dt>
+<dd><p>Plot earthquake locations worldwide scatter map.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame:</strong></dt><dd><p>Dataset with ‘country_name’ and ‘CPI’ info.</p>
+</dd>
+<dt><strong>:title_name: str:</strong></dt><dd><p>Plot title name.</p>
+</dd>
+</dl>
+<p><strong>Returns: gv.Polygons object</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.disaster_cpi_prediction.predict_cpi_model">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.disaster_cpi_prediction.</span></span><span class="sig-name descname"><span class="pre">predict_cpi_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2023</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disaster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Wildfire'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.disaster_cpi_prediction.predict_cpi_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Finds CPI of a specific disaster type across the world in the future. Returns prediction dataframe (country_name, CPI) and title of plot.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>Dataset after preparation and feature extraction.</p>
+</dd>
+<dt><strong>:features: list</strong></dt><dd><p>Feature extraction list.</p>
+</dd>
+<dt><strong>:year: int</strong></dt><dd><p>Year for inference.</p>
+</dd>
+<dt><strong>:month: int</strong></dt><dd><p>Month for inference.</p>
+</dd>
+<dt><strong>:disaster: str</strong></dt><dd><p>One type from [‘Earthquake’, ‘Extreme temperature’, ‘Flood’, ‘Landslide’, ‘Storm’, ‘Wildfire’].</p>
+</dd>
+</dl>
+<p><strong>Returns: (pd.DataFrame, str)</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.disaster_cpi_prediction.prepare_worldwide_disaster_data">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.disaster_cpi_prediction.</span></span><span class="sig-name descname"><span class="pre">prepare_worldwide_disaster_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1970-2022_DISASTERS.xlsx</span> <span class="pre">-</span> <span class="pre">emdat</span> <span class="pre">data.csv'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.disaster_cpi_prediction.prepare_worldwide_disaster_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Do dataset extraction and preparation for model-building. Returns tuple of cleaned dataframe and feature list.</p>
+<dl class="simple">
+<dt><strong>:file_name: str</strong></dt><dd><p>File path for .csv dataset.</p>
+</dd>
+</dl>
+<p><strong>Returns: (pd.DataFrame, list)</strong></p>
+</dd></dl>
+
+</section>
+<section id="earthquake-prediction-model">
+<h2>Earthquake Prediction Model<a class="headerlink" href="#earthquake-prediction-model" title="Permalink to this headline">#</a></h2>
+<p>The purpose of this visualization is twofold: first, users can pick from a dropdown whether to highlight historical or
+predicted earthquakes in the next seven days. Prediction is again done using XGBoost.</p>
+<span class="target" id="module-custom_code.ML_models.realtime_earthquake_prediction"></span><dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.plot_geomap">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">plot_geomap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.plot_geomap" title="Permalink to this definition">#</a></dt>
+<dd><p>Show scatter plots on world map. Returns</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame:</strong></dt><dd><p>Dataframe for dataset (including ‘longitude’ and ‘latitude’ columns).</p>
+</dd>
+<dt><strong>:title: str:</strong></dt><dd><p>Title of scatter plots.</p>
+</dd>
+</dl>
+<p><strong>Returns: None</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.plot_interactive_scattermap">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">plot_interactive_scattermap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tomato'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.plot_interactive_scattermap" title="Permalink to this definition">#</a></dt>
+<dd><p>Plot earthquake locations on worldwide scatter map.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame:</strong></dt><dd><p>Dataframe for dataset (including ‘longitude’ and ‘latitude’ columns).</p>
+</dd>
+<dt><strong>:title_name: str:</strong></dt><dd><p>Title of scatter plots.</p>
+</dd>
+<dt><strong>:point_size: int:</strong></dt><dd><p>Scatter point size.</p>
+</dd>
+</dl>
+<p><strong>Returns: geoviews map objects</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.plot_roc">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">plot_roc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.plot_roc" title="Permalink to this definition">#</a></dt>
+<dd><p>Create Receiver Operating Characteristic plot.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>Dataset after feature extraction after getting from ‘prepare_earthquake_data’.</p>
+</dd>
+<dt><strong>:max_depth: int</strong></dt><dd><p>Max tree depth; hyperparameter for XGBoost model.</p>
+</dd>
+<dt><strong>:eta: float</strong></dt><dd><p>Step size shrinkage value for addressing overfitting; hyperparameter for XGBoost model.</p>
+</dd>
+</dl>
+<p><strong>Returns: None</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.predict_earthquake_model">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">predict_earthquake_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_live</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">days_out_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.predict_earthquake_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Perform earthquake prediction using XGBoost. Returns list of next seven days (‘yyyy-mm-dd’) and dataframe indicating most likely earthquake occurance in next seven days.</p>
+<dl class="simple">
+<dt><strong>:df: pd.DataFrame</strong></dt><dd><p>Dataset after feature extraction after getting from ‘prepare_earthquake_data’.</p>
+</dd>
+<dt><strong>:df_live: pd.DataFrame</strong></dt><dd><p>Dataset used to predict in next seven days from ‘prepare_earthquake_data’.</p>
+</dd>
+<dt><strong>:days_out_to_predict: int</strong></dt><dd><p>Rolling window size.</p>
+</dd>
+<dt><strong>:max_depth: int</strong></dt><dd><p>Max tree depth; hyperparameter for XGBoost model.</p>
+</dd>
+<dt><strong>:eta: float</strong></dt><dd><p>Step size shrinkage value for addressing overfitting; hyperparameter for XGBoost model.</p>
+</dd>
+</dl>
+<p><strong>Returns: (list, pd.DataFrame)</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.predicted_earthquake_module">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">predicted_earthquake_module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voila</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.predicted_earthquake_module" title="Permalink to this definition">#</a></dt>
+<dd><p>Plot the historical average locations of earthquakes as well as predicted earthquakes in the next 7 days.</p>
+<dl class="simple">
+<dt><strong>:voila: bool</strong></dt><dd><p>Use to convert between ipywidget output and bokeh backend output</p>
+</dd>
+</dl>
+<p><strong>Returns: ipywidget converted panel &amp; bokeh plot, or a panel &amp; bokeh plot.</strong></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_code.ML_models.realtime_earthquake_prediction.prepare_earthquake_data">
+<span class="sig-prename descclassname"><span class="pre">custom_code.ML_models.realtime_earthquake_prediction.</span></span><span class="sig-name descname"><span class="pre">prepare_earthquake_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">days_out_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#custom_code.ML_models.realtime_earthquake_prediction.prepare_earthquake_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Gets dataset about historical earthquakes with aggregated longitude and latitude. Returns dataset after feature extraction and dataset used to predict in next seven days.</p>
+<dl class="simple">
+<dt><strong>:days_out_to_predict: int</strong></dt><dd><p>Rolling window size.</p>
+</dd>
+</dl>
+<p><strong>Returns: (pd.DataFrame, pd.DataFrame)</strong></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Cameron Lewis, Emily Park, Pujika Kumar, Ruining Feng, Siyuan Zhang, Sri Shatagopam, Yue Wu.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
