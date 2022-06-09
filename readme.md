@@ -120,7 +120,7 @@ Built with Sphinx; preview available <a href="https://htmlpreview.github.io/?htt
 <h2> Coverage Report</h2>
 Testing done using PyTest, coverage report created using coverage. Preview available <a href="https://htmlpreview.github.io/?https://github.com/srishatagopam/ECE-229-Natural-Disasters-and-Response/blob/main/htmlcov/index.html"> here.<a>
 
-<h2> AWS guide </h2>
+<h2> AWS Guide </h2>
 
 1.EC2 setup
 
